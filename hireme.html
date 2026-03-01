@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Alfidha Zohra H</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="hire-me-page">
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <main class="hire-container">
+        <section class="reveal active">
+            <div class="section-header">
+                <h1 class="gradient-text">HIRE ME</h1>
+                <p>Let's build something extraordinary together. I'm currently open to internships and freelance projects.</p>
+            </div>
+
+            <div class="hire-grid">
+                <div class="standard-card action-card">
+                    <h2 class="gradient-text">Let's Talk!</h2>
+                    <p>Choose your preferred way to reach out. I typically respond within 24 hours.</p>
+                    
+                    <div class="direct-actions">
+                        <a href="mailto:alfidhahaja@gmail.com?subject=Project%20Inquiry" class="btn-primary large-btn">
+                            <i class="fas fa-paper-plane"></i> Send an Email
+                        </a>
+                        <a href="https://linkedin.com/in/alfidhazohrah" target="_blank" class="btn-secondary large-btn">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn Message
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item standard-card" onclick="copyToClipboard('alfidhahaja@gmail.com')">
+                        <i class="fas fa-copy"></i>
+                        <div>
+                            <h4>Click to Copy Email</h4>
+                            <p id="email-text">alfidhahaja@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="info-item standard-card link-card">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn Profile</h4>
+                            <p>Alfidha Zohra H</p>
+                        </div>
+                    </a>
+
+                    <div class="info-item standard-card">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Nagercoil, Tamil Nadu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const emailP = document.getElementById('email-text');
+                const originalText = emailP.innerText;
+                
+                emailP.innerText = "Copied to Clipboard!";
+                emailP.style.color = "#00f2ff"; /* Your accent color */
+                
+                setTimeout(() => {
+                    emailP.innerText = originalText;
+                    emailP.style.color = ""; 
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
